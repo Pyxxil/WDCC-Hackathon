@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from "react"
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
@@ -28,3 +29,36 @@ function Form(props) {
   )
 }
 export default Form
+=======
+import React, { useState, useEffect } from "react";
+function Form(props) {
+  const [state, setState] = useState({});
+  function handleChange(event) {
+    event.persist();
+    setState((_state) => ({
+      ..._state,
+      [event.target.id]: event.target.value,
+    }));
+  }
+  function handleClick(e) {
+    console.log("asdasd");
+  }
+  return (
+    <div>
+      <form id="forUser">
+        <span>Name</span>
+        <input onChange={handleChange} id="Name"></input>
+        <br />
+        <span>Members</span>
+        <input onChange={handleChange} id="Members"></input>
+        <br />
+        <span>Leader</span>
+        <input onChange={handleChange} id="Leader"></input>
+        <br />
+        <input type="submit" onClick={handleClick}></input>
+      </form>
+    </div>
+  );
+}
+export default Form;
+>>>>>>> 0b0f94678c8c6cd5b9967fe120be532a2cbc12fe
