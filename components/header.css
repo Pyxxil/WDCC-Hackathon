@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #4299e1;
+    font-family: 'Monda', sans-serif;
+}
+
+.navbar .logo {
+    text-align: center;
+}
+
+.navbar .big {
+    font-size: 2em;
+}
+
+.logo .nav-links {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0.8em;
+    transition-duration: 0.5s;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    cursor: pointer;
+    list-style-type: none;
+    padding: 1.5em;
+    transition-duration: 0.5s;
+    font-size: 1.5em;
+}
+
+.nav-links:hover {
+    background-color: #82b5df;
+}
+
+.active-bg {
+    background-color: #82b5df;
+}
+
+.active {
+    color: #FFFFFF;
+}
+
+.not-active {
+    color: #000000;
+    text-decoration: none;
+}
+
+
