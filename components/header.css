@@ -3,28 +3,21 @@
     font-family: 'Monda', sans-serif;
 }
 
-.navbar .logo {
-    text-align: center;
-}
-
-.navbar .big {
-    font-size: 2em;
-}
-
 .logo .nav-links {
     cursor: pointer;
     list-style-type: none;
-    padding: 0.8em;
+    padding: 0.65em 1.6em;
     transition-duration: 0.5s;
-    font-size: 1.2em;
+    font-size: 2em;
 }
+
 
 .nav-links {
     cursor: pointer;
     list-style-type: none;
-    padding: 1.5em;
+    padding: 1.2em 1.5em;
     transition-duration: 0.5s;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 .nav-links:hover {

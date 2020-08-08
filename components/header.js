@@ -19,7 +19,7 @@ function Header ({ user, loading }) {
     <header className='navbar'>
       <nav className='container flex items-center justify-between flex-wrap'>
         <div id='Brand' className="logo">
-          <MenuItem id="landing-page" href='/'><span className="big">Timeline</span> <br/> Your path to success!</MenuItem>
+          <MenuItem id="landing-page" href='/'>Timeline</MenuItem>
         </div>
         <ul className='flex'>
           <MenuItem href='/events'>
