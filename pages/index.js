@@ -9,6 +9,8 @@ const LinkA = ({ children, href }) =>
     <a className='pl-4 block pr-4 underline hover:text-white'>{children}</a>
   </Link>
 
+  
+
 function Home () {
   // set required to true to force the page to require login.
   const { user, loading } = useFetchUser({ required: false })
@@ -35,17 +37,30 @@ function Home () {
   }
   return (
     <Layout user={user} loading={loading}>
-      <h1>Page heading</h1>
-      <p>Interesting content here</p>
 
       {loading && <p>Loading login info...</p>}
       {!loading && !user && (
         <>
-          <p>
-            To view the dashboard <a href='/api/login'>Login</a>
-          </p>
+  <div class="flex mb-4">
+  <div class="w-full h-12"> 
+  <section className="container-hero">
+    <div>
+      <h1>Timeline</h1>
+      <p>To start your path to success: </p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="#">
+  Signup
+</button>
+<p>Or <a href="#"> Login </a></p>
+    </div>
+  </section>
+     
+  </div>
+  </div>
+
         </>
-      )}
+  )}
+
+      {/* After login see the information below */}
       {user && (
         <>
           <ProfileCard user={user}>

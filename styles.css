@@ -37,3 +37,35 @@ article a {
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+html{
+  font-family: 'Monda', sans-serif; /*select font later*/
+}
+.container-hero{
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  
+}
+
+.container-hero h1{
+font-size: 8rem;
+line-height: 1;
+
+}
+
+.container-hero p{
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0.5rem 0 1rem 0;
+  }
+
+  .container-hero button{
+    padding: 1rem 3rem;
+    font-weight: 700;
+    margin-top: 5rem;
+  }
+
+
