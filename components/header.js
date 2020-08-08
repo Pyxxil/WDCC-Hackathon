@@ -13,6 +13,7 @@ const MenuItem = ({ children, href }) => {
     )
 }
 
+
 function Header ({ user, loading }) {
   
   return (
@@ -25,6 +26,22 @@ function Header ({ user, loading }) {
           <MenuItem href='/events'>
               Events
           </MenuItem>
+          <MenuItem href='/'>
+              Home
+          </MenuItem>
+          <MenuItem href="/form">
+            Make stuff
+          </MenuItem>
+          <MenuItem href="/formevent"></MenuItem>
+          <MenuItem href="/formclub"></MenuItem>
+          <MenuItem href="/formgoal"></MenuItem>
+          <MenuItem href='/about'>
+              About
+          </MenuItem>     
+          <MenuItem href="/calendar">
+            Calendar
+          </MenuItem>
+          <MenuItem href="/event"/>
           {!loading &&
             (user ? (
               <>
