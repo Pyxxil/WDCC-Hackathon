@@ -1,19 +1,23 @@
 // This import is only needed when checking authentication status directly from getInitialProps
 // import auth0 from '../lib/auth0'
+import useSWR from "swr";
+
 import { useFetchUser } from "../lib/user";
 import Layout from "../components/layout";
 
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-// import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import Button from "@material-ui/core/Button";
 
-// import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
+import config from "../lib/config";
 
 import { MultiSelect } from "@progress/kendo-react-dropdowns";
+import { useEffect } from "react";
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -45,13 +49,27 @@ const ProfileCard = ({ user }) => {
 
 function Profile() {
   const classes = useStyles();
-  const [age, setAge] = React.useState("");
+  const { user, loading } = useFetchUser({ required: true });
+  const preferences = useSWR(
+    `${config.HOST}/api/preferences${user ? "?user_id=" + user.nickname : ""}`,
+    fetcher
+  );
+  const [state, setState] = React.useState({});
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const handleChange = (pref) => {
+    return (event) => {
+      setState({ ...state, [pref]: event.target.value });
+    };
   };
 
-  const { user, loading } = useFetchUser({ required: true });
+  useEffect(() => {
+    if (preferences.data) {
+      setState(preferences.data[0]);
+    }
+  }, [preferences.data]);
+
+  console.log("Preferences", preferences.data);
+  console.log("State", state);
 
   const job_type = ["Casual", "Internship", "Graduate"];
 
@@ -78,6 +96,15 @@ function Profile() {
     "React",
   ];
 
+  const saveData = () => {
+    if (user) {
+      fetch("/api/preferences?user_id=" + user.nickname, {
+        method: "post",
+        body: JSON.stringify(state),
+      });
+    }
+  };
+
   return (
     <Layout user={user} loading={loading}>
       {loading ? (
@@ -98,8 +125,8 @@ function Profile() {
               <Select
                 labelId="demo-simple-select-helper-label"
                 id="demo-simple-select-helper"
-                value={age}
-                onChange={handleChange}
+                value={state.Year || ""}
+                onChange={handleChange("Year")}
               >
                 <MenuItem value="">
                   <em>None</em>
@@ -122,6 +149,8 @@ function Profile() {
               name="job types"
               data={job_type}
               required={false}
+              onChange={handleChange("Job")}
+              value={state.Job || []}
             />
 
             <h2>What job industry do you want to work in?</h2>
@@ -131,6 +160,8 @@ function Profile() {
               name="industry"
               data={industry_type}
               required={false}
+              onChange={handleChange("Industry")}
+              value={state.Industry || []}
             />
 
             <h2>Which skills would you like to learn?</h2>
@@ -140,11 +171,13 @@ function Profile() {
               name="skills"
               data={skills_to_learn}
               required={false}
+              onChange={handleChange("Skills")}
+              value={state.Skills || []}
             />
             <br />
             <br />
 
-            <Button variant="outlined" color="primary">
+            <Button variant="outlined" color="primary" onClick={saveData}>
               Save
             </Button>
           </div>
