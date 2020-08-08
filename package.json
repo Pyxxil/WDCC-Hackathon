@@ -19,6 +19,7 @@
     "@progress/kendo-react-intl": "^3.15.0",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "jquery": "^3.5.1",
     "mongodb": "^3.5.9",
     "n-readlines": "^1.0.0",
     "next": "latest",
