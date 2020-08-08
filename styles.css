@@ -7,6 +7,11 @@
   padding-bottom: 5em;
 }
 
+.desc {
+  width: 60%;
+  margin: auto auto;
+}
+
 /* purgecss start ignore */
 @tailwind base;
 h1 {
