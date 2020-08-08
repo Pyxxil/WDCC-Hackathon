@@ -53,7 +53,30 @@ function Profile() {
   const job_type = [
     { label: "Casual", value: 1 },
     { label: "Internship", value: 2 },
-    { label: "Junior Graduate", value: 3 },
+    { label: "Graduate", value: 3 },
+  ];
+
+  const industry_type = [
+    { label: "Accounting", value: 1 },
+    { label: "Backend Developer", value: 2 },
+    { label: "Civil Engineer", value: 3 },
+    { label: "Data Analyst", value: 4 },
+    { label: "Frontend Developer", value: 5 },
+    { label: "Mechatronics Engineer", value: 6 },
+    { label: "Sales and Marketing", value: 7 },
+    { label: "Software Developer", value: 8 },
+    { label: "UX/UI Designer", value: 9 },
+  ];
+
+  const skills_to_learn = [
+    { label: "C", value: 1 },
+    { label: "C#", value: 2 },
+    { label: "C++", value: 3 },
+    { label: "Java", value: 4 },
+    { label: "HTML/CSS", value: 5 },
+    { label: "Matlab", value: 6 },
+    { label: "Python", value: 7 },
+    { label: "React", value: 8 },
   ];
 
   return (
@@ -81,13 +104,21 @@ function Profile() {
               <MenuItem value={2}>2nd year</MenuItem>
               <MenuItem value={3}>3rd year</MenuItem>
               <MenuItem value={4}>4th year</MenuItem>
-              <MenuItem value={5}>Postgrad</MenuItem>
-              <MenuItem value={6}>Graduated</MenuItem>
+              <MenuItem value={5}>5th year</MenuItem>
+              <MenuItem value={6}>Postgrad</MenuItem>
+              <MenuItem value={7}>Graduate</MenuItem>
             </Select>
             <FormHelperText>What stage of uni are you at?</FormHelperText>
           </FormControl>
 
+          <h2>What job type are you interested in?</h2>
           <ReactMultiSelectCheckboxes options={job_type} />
+
+          <h2>What job industry do you want to work in?</h2>
+          <ReactMultiSelectCheckboxes options={industry_type} />
+
+          <h2>Which skills would you like to learn?</h2>
+          <ReactMultiSelectCheckboxes options={skills_to_learn} />
         </>
       )}
     </Layout>
