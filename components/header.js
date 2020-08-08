@@ -23,33 +23,25 @@ function Header ({ user, loading }) {
           <MenuItem id="landing-page" href='/'>Timeline</MenuItem>
         </div>
         <ul className='flex'>
-          <MenuItem href='/events'>
-              Events
-          </MenuItem>
-          <MenuItem href='/'>
-              Home
-          </MenuItem>
-          <MenuItem href="/form">
-            Make stuff
-          </MenuItem>
           <MenuItem href="/formevent"></MenuItem>
           <MenuItem href="/formclub"></MenuItem>
-          <MenuItem href="/formgoal"></MenuItem>
-          <MenuItem href='/about'>
-              About
-          </MenuItem>     
-          <MenuItem href="/calendar">
-            Calendar
+          <MenuItem href="/formgoal"></MenuItem>    
+          <MenuItem href='/event'>
+            Events
           </MenuItem>
-          <MenuItem href="/event"/>
+          
+          {/* <MenuItem href="/form">
+            Make stuff
+          </MenuItem> */}
+          
           {!loading &&
             (user ? (
               <>
                 <MenuItem href='/calendar'>
-                Calendar
+                  Calendar
                 </MenuItem>
                 <MenuItem href='/profile'>
-                Profile
+                  Profile
                 </MenuItem>
               </>
             ) : (
