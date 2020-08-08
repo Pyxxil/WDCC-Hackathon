@@ -14,11 +14,15 @@
   "license": "MIT",
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.6.0",
+<<<<<<< HEAD
     "@material-ui/core": "^4.11.0",
     "@progress/kendo-react-dropdowns": "^3.15.0",
     "@progress/kendo-react-intl": "^3.15.0",
+=======
+>>>>>>> pushing new changes
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "jquery": "^3.5.1",
     "mongodb": "^3.5.9",
     "n-readlines": "^1.0.0",
     "next": "latest",

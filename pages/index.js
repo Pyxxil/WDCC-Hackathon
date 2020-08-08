@@ -10,7 +10,13 @@ const LinkA = ({ children, href }) => (
   </Link>
 );
 
+<<<<<<< HEAD
 function Home() {
+=======
+
+
+function Home () {
+>>>>>>> pushing new changes
   // set required to true to force the page to require login.
   const { user, loading } = useFetchUser({ required: false });
 
@@ -35,7 +41,11 @@ function Home() {
     logEvent("click", 1);
   };
   return (
+<<<<<<< HEAD
     <Layout user={user} loading={loading}>
+=======
+    <Layout user={user} loading={loading
+>>>>>>> pushing new changes
       {loading && <p>Loading login info...</p>}
       {!loading && !user && (
         <>
@@ -60,6 +70,7 @@ function Home() {
             </div>
           </section>
 
+<<<<<<< HEAD
           <section className="container-about">
             <div>
               <h2>About</h2>
@@ -79,6 +90,43 @@ function Home() {
               </div>
             </div>
           </section>
+=======
+
+  <section className="container-hero">
+    <div>
+      <h1>Timeline</h1>
+      <div className="Divider"></div>
+      <p>Start your path to success. </p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="#">
+  Signup
+</button>
+<p><a href="#" class="LearnMore"> Learn more </a></p>
+    </div>
+  </section>
+
+  <section className="container-about">
+  <div>
+      <h2>About</h2>
+      <div className="Divider"></div>
+      <p> This is our product!! </p>
+
+    </div>
+  </section>
+
+   <section className="container-features">
+     <div>
+       <h2>Features</h2>
+       <div className = "Divider"/>
+      </div>
+      <div className="container-features-grid">
+      <div><img src="/img/cal.svg"/><p><h4>Calendar:</h4> {/* add logo of calendar */} Keep track of your assignments and upcoming events.</p></div>
+      <div><img src="/img/profile.svg"/><p><h4>Personalized:</h4> {/* add logo of a tick */} Tell us your goals and let us personalize all the events for you. </p></div>
+      <div><img src="/img/info.svg"/><p><h4>Consolidated Information:</h4> {/* add logo of a tick */} Information at the touch of your fingers, curated by us. </p></div>
+      <div><img src="/img/event.svg"/><p><h4>Events:</h4> {/* add logo of a tick */} See relevant career workshops and club events. </p></div>
+      </div>
+
+    </section>
+>>>>>>> pushing new changes
 
           <section className="container-features">
             <div>
@@ -114,9 +162,13 @@ function Home() {
             </div>
           </section>
 
+<<<<<<< HEAD
           <footer>
             {/* <a href="#"  id = "TOC"> Terms of Conditions</a> */}
           </footer>
+=======
+    </footer>
+>>>>>>> pushing new changes
         </>
       )}
 

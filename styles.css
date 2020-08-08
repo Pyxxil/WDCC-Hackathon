@@ -153,7 +153,11 @@ html {
   display: grid;
   place-items: center;
   height: 100vh;
+<<<<<<< HEAD
   /* background-image: ; */
+=======
+  /*background-image: ;*/
+>>>>>>> pushing new changes
 }
 
 .container-hero h1 {
@@ -182,6 +186,7 @@ html {
   font-size: 1rem;
 }
 
+<<<<<<< HEAD
 .Divider {
   width: 5rem;
   height: 4px;
@@ -190,6 +195,31 @@ html {
 }
 
 .container-about {
+=======
+ .container-hero:nth-child(4){
+   font-size: 1rem;
+ }
+
+.container-hero button{
+    padding: 1rem 3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+
+ }
+
+ .Learnmore{
+    font-size: 1rem;
+ }
+ .Divider{
+   width: 5rem;
+   height: 4px;
+   background-color: rgb(66, 153, 225);
+   margin: 1rem auto;
+ }
+
+ .container-about{
+>>>>>>> pushing new changes
   text-align: center;
   margin: 0px;
   display: grid;
@@ -198,6 +228,10 @@ html {
   background-color: rgb(66, 153, 225);
   color: white;
   padding: 5rem 0;
+<<<<<<< HEAD
+=======
+
+>>>>>>> pushing new changes
 }
 
 .container-about .Divider {
@@ -235,6 +269,7 @@ html {
 footer {
   text-align: center;
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 1200px) {
   .container-features-grid {
@@ -249,3 +284,112 @@ footer {
   }
 }
 
+=======
+.react-calendar{
+  position:relative;
+  top:1vh;
+  margin:auto;
+}
+.react-calendar{
+  /* margin-bottom: 2vh; */
+  width:80vw;
+  max-width:100%;
+  background:#f0f2ac;
+  /* border:4px solid #a0a096; */
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 10px #f0f2ac;
+  font-family: 'Sigmar One', cursive;
+  line-height:1.125em;
+}
+.react-calendar,.react-calendar *,.react-calendar *:before,.react-calendar *:after{
+  box-sizing:border-box;
+}
+.react-calendar button{
+  margin:0;
+  border:0;
+  outline:none;
+}
+.react-calendar button:enabled:hover{
+  cursor:pointer;
+}
+.react-calendar__navigation{
+  height:44px;
+  margin-bottom:1em;
+}
+.react-calendar__navigation button{
+  min-width:44px;
+  background:none;
+  font-size: 2em;
+  font-family: 'Sigmar One', cursive;
+}
+.react-calendar__navigation button:enabled:hover{
+  background-color:#14a76c;
+  border-radius: 5px;
+}
+.react-calendar__month-view__weekdays{
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:2em;
+  font-family: 'Sigmar One', cursive;
+}
+.react-calendar__month-view__weekdays__weekday{
+  padding:0.5em;
+}
+.react-calendar__month-view__days__day--weekend{
+  color: #FF652F;
+}
+.react-calendar__month-view__days__day--neighboringMonth{
+  color:#757575;
+}
+.react-calendar__tile{
+  max-width:100%;
+  text-align:center;
+  padding:0.75em 0.5em;
+  background:none;
+  font-size: 2em;
+  font-family: 'Sigmar One', cursive;
+}
+.react-calendar__tile:disabled{
+  background-color:#14a76c;
+  border-radius: 20px;
+}
+.react-calendar__tile:enabled:hover{
+  background-color:#14a76c;
+  border-radius: 20px;
+}
+.dateTime {
+  margin: auto 5px;
+}
+.dateTopBar{
+  display: flex;
+  background-color: #272727;
+}
+.eventNote {
+  border: 1px solid rgb(218, 98, 47);
+}
+.everythinghasamarginnote {
+  margin: 5px;
+}
+#displayNotes {
+  margin:50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+#eventHolder {
+  margin:0 auto;
+  padding:20px;
+  padding-top:50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  background-color:rgba(179, 189, 191,0.15);
+}
+>>>>>>> pushing new changes
