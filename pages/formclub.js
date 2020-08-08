@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 function Form(props) {
   const [state, setState] = useState({});
@@ -31,6 +32,8 @@ function Form(props) {
 }
 export default Form;
 =======
+=======
+>>>>>>> pushing to ivan branch
 import React, {useState, useEffect} from "react"
 import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
@@ -61,4 +64,7 @@ function Form(props) {
   )
 }
 export default Form
+<<<<<<< HEAD
 >>>>>>> revieweese
+=======
+>>>>>>> pushing to ivan branch
