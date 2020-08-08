@@ -10,15 +10,15 @@ export const EventsTable = ({ events }) => {
   return (
     <table>
       <tbody>
-        {events.map((el, index) =>
+        {events.map((el, index) => (
           <tr key={index}>
             <td>{el.name}</td>
             <td>{el.date}</td>
           </tr>
-        )}
+        ))}
       </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default EventsTable
+export default EventsTable;
