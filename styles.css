@@ -5,11 +5,12 @@ h1 {
 }
 h2 {
   @apply text-2xl font-thin leading-loose;
+  text-align: center;
 }
 h3 {
   @apply text-xl font-thin leading-loose;
-
 }
+
 h4 {
   @apply font-semibold;
 }
@@ -37,3 +38,93 @@ article a {
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+html{
+  font-family: 'Monda', sans-serif; /*select font later*/
+}
+.container-hero{
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  /*background-image: ;*/  
+}
+
+.container-hero h1{
+font-size: 5rem;
+line-height: 1;
+
+}
+
+.container-hero p{
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0.5rem 0 1rem 0;
+  }
+
+ .container-hero:nth-child(4){
+   font-size: 1rem;
+ } 
+
+.container-hero button{
+    padding: 1rem 3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    
+ }
+
+ .Learnmore{
+    font-size: 1rem;
+ }
+ .Divider{
+   width: 5rem;
+   height: 4px;
+   background-color: rgb(66, 153, 225);
+   margin: 1rem auto;
+ }
+
+ .container-about{
+  text-align: center;
+  margin: 0px;
+  display: grid;
+  place-items: center;
+  min-height: 250px;
+  background-color:rgb(66, 153, 225);
+  color: white;
+  padding: 5rem 0;
+  
+}
+
+.container-about .Divider{
+  background-color:white;
+}
+
+.container-features{
+  padding:5rem 0;
+}
+
+.container-features-grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-column-gap: 4rem;
+max-width: 1200px;
+margin: 4rem auto;
+}
+
+.container-features-grid div img{
+  margin: 0 auto;
+  width: 50%;
+  max-height: 100px;
+}
+
+.container-features-grid div{
+  display: grid;
+  justify-self: center;
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+}
