@@ -41,8 +41,8 @@ function Home () {
       {loading && <p>Loading login info...</p>}
       {!loading && !user && (
         <>
-  <div class="flex mb-4">
-  <div class="w-full h-12"> 
+
+  
   <section className="container-hero">
     <div>
       <h1>Timeline</h1>
@@ -63,10 +63,25 @@ function Home () {
       
     </div>
   </section>
-     
-  </div>
-  </div>
+   
+   <section className="container-features">
+     <div>
+       <h2>Features</h2>
+       <div className = "Divider"/>
+      </div>
+      <div className="container-features-grid">
+      <div><img src="/img/cal.svg"/><p>Calendar: {/* add logo of calendar */} Keep track of your assignments and upcoming events</p></div>
+      <div><img src="/img/profile.svg"/><p>Personalized: {/* add logo of a tick */} Tell us your goals and let us personalize all the events for you </p></div>
+      <div><img src="/img/info.svg"/><p>Consolidated Information {/* add logo of a tick */} Information at the touch of your fingers </p></div>
+      <div><img src="/img/event.svg"/><p> Events: {/* add logo of a tick */} See career workshops and club events on your personalized calendar</p></div>
+      </div>
+       
+    </section>
 
+    <footer>
+      <p id = "TOC"> Terms of Conditions</p>
+            
+    </footer>     
         </>
   )}
 

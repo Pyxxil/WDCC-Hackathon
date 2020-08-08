@@ -5,6 +5,7 @@ h1 {
 }
 h2 {
   @apply text-2xl font-thin leading-loose;
+  text-align: center;
 }
 h3 {
   @apply text-xl font-thin leading-loose;
@@ -47,7 +48,7 @@ html{
   display: grid;
   place-items: center;
   height: 100vh;
-  
+  /*background-image: ;*/  
 }
 
 .container-hero h1{
@@ -86,13 +87,41 @@ line-height: 1;
   margin: 0px;
   display: grid;
   place-items: center;
-  min-height: 400px;
+  min-height: 250px;
   background-color:rgb(66, 153, 225);
   color: white;
-  padding: 0px;
-  width: 100vw;
+  padding: 5rem 0;
+  
 }
 
 .container-about .Divider{
   background-color:white;
+}
+
+.container-features{
+  padding:5rem 0;
+}
+
+.container-features-grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-column-gap: 4rem;
+max-width: 1200px;
+margin: 4rem auto;
+}
+
+.container-features-grid div img{
+  margin: 0 auto;
+  width: 50%;
+  max-height: 100px;
+}
+
+.container-features-grid div{
+  display: grid;
+  justify-self: center;
+  text-align: center;
+}
+
+footer{
+  text-align: center;
 }
