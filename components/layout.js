@@ -10,7 +10,6 @@ function Layout({ user, loading = false, children }) {
           href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap"
           rel="stylesheet"
         />
-
         <link
           rel="stylesheet"
           href="https://unpkg.com/@progress/kendo-theme-material@latest/dist/all.css"
