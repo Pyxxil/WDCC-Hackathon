@@ -1,7 +1,7 @@
-import nextConnect from 'next-connect'
-import config from '../../lib/config'
+import nextConnect from "next-connect";
+import config from "../../lib/config";
 
-const handler = nextConnect()
+const handler = nextConnect();
 
 /** Returns the current config - helps debugging
  * super insecure as will leak environment secrets from teh server
@@ -9,7 +9,7 @@ const handler = nextConnect()
  * admin only
  */
 handler.get(async (req, res) => {
-  res.json(config)
-})
+  res.json(config);
+});
 
-export default handler
+export default handler;

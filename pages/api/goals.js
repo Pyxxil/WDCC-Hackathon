@@ -13,17 +13,28 @@ handler.use(mongodb);
 handler.get(async (req, res) => {
   // find returns a cursor which we need to iterate through to get the results.
   // use next or toArray
-  const doc = await req.db.collection("events").find().toArray();
-  // console.log(doc)
-  res.json(doc);
+  if (req.query) {
+    const doc = await req.db
+      .collection("goals")
+      .find({ user_id: req.query.user_id })
+      .toArray();
+    console.log("Doc", doc);
+    res.json(doc);
+  } else {
+    req.json({ message: "error" });
+  }
 });
 
 handler.post(async (req, res) => {
   const data = JSON.parse(req.body);
   data.date = new Date();
+  data.user_id = req.query.user_id;
+
+  console.log(data);
+
   try {
     await req.db
-      .collection("events")
+      .collection("goals")
       .updateOne({ date: data.date }, { $set: data }, { upsert: true });
     res.json({ message: "ok" });
   } catch (e) {
