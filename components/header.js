@@ -16,22 +16,16 @@ function Header ({ user, loading }) {
           WDCC Workshop Application
         </div>
         <ul className=' flex   '>
-          <MenuItem href='/'>
-              Home
-          </MenuItem>
-          <MenuItem href="/form">
-            Make stuff
-          </MenuItem>
-          <MenuItem href="/formevent"></MenuItem>
-          <MenuItem href="/formclub"></MenuItem>
-          <MenuItem href="/formgoal"></MenuItem>
-          <MenuItem href='/about'>
-              About
-          </MenuItem>
-          <MenuItem href="/calendar">
-            Calendar
-          </MenuItem>
-          <MenuItem href="/event"/>
+          <MenuItem href='/'>Home</MenuItem>
+          <MenuItem href="/form">MUser</MenuItem>
+          <MenuItem href="/formevent">MEvent</MenuItem>
+          <MenuItem href="/formclub">MClub</MenuItem>
+          <MenuItem href="/formgoal">MGoal</MenuItem>
+          <MenuItem href="/formjob">MJob</MenuItem>
+          <MenuItem href='/about'>About</MenuItem>
+          <MenuItem href="/calendar">Calendar</MenuItem>
+          <MenuItem href="/event">Event</MenuItem>
+          <MenuItem href="/events">Events</MenuItem>
           {!loading &&
             (user ? (
               <>

@@ -9,7 +9,7 @@ const LinkA = ({ children, href }) =>
     <a className='pl-4 block pr-4 underline hover:text-white'>{children}</a>
   </Link>
 
-  
+
 
 function Home () {
   // set required to true to force the page to require login.
@@ -36,13 +36,12 @@ function Home () {
     logEvent('click', 1)
   }
   return (
-    <Layout user={user} loading={loading}>
-
+    <Layout user={user} loading={loading
       {loading && <p>Loading login info...</p>}
       {!loading && !user && (
         <>
 
-  
+
   <section className="container-hero">
     <div>
       <h1>Timeline</h1>
@@ -60,10 +59,10 @@ function Home () {
       <h2>About</h2>
       <div className="Divider"></div>
       <p> This is our product!! </p>
-      
+
     </div>
   </section>
-   
+
    <section className="container-features">
      <div>
        <h2>Features</h2>
@@ -75,13 +74,13 @@ function Home () {
       <div><img src="/img/info.svg"/><p><h4>Consolidated Information:</h4> {/* add logo of a tick */} Information at the touch of your fingers, curated by us. </p></div>
       <div><img src="/img/event.svg"/><p><h4>Events:</h4> {/* add logo of a tick */} See relevant career workshops and club events. </p></div>
       </div>
-       
+
     </section>
 
     <footer>
       <a href="#"  id = "TOC"> Terms of Conditions</a>
 
-    </footer>     
+    </footer>
         </>
   )}
 

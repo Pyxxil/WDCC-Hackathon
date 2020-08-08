@@ -1,12 +1,13 @@
-import React from "react"
-// import Layout from '../components/layout'
+import React, {useState, useEffect} from "react"
+import Layout from '../components/layout'
 import { useFetchUser } from '../lib/user'
 import Calendar from "react-calendar";
 import Link from 'next/link'
-class Showcalendar extends React.Component {
-  onChange = (e) => {
-    console.log(e)
-    const data = e.toString().split(" ");
+
+function Showcalendar(props) {
+  const {user, loading} = useFetchUser()
+  function onChange(event) {
+    const data = event.toString().split(" ");
     let day = data[2];
     let month = data[1];
     let year = data[3];
@@ -16,16 +17,12 @@ class Showcalendar extends React.Component {
     const route = `/calendar/${day}/${month}/${year}`;
     console.log(route)
   }
-
-  render() {
-    console.log(this.date)
-    return(
-      <div>
-      <Link href="event">asd</Link>
-      <h1>auskdhjanskjd</h1>
-        <Calendar onChange = {this.onChange} />
-      </div>
-    )
-  }
+  return(
+    <div>
+      <Layout user={user} loading={loading}>
+        <Calendar onChange = {onChange} />
+      </Layout>
+    </div>
+  )
 }
 export default Showcalendar
