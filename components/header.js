@@ -23,9 +23,9 @@ function Header({ user, loading }) {
           </MenuItem>
         </div>
         <ul className="flex">
-          <MenuItem href="/formevent"></MenuItem>
+          {/* <MenuItem href="/formevent"></MenuItem>
           <MenuItem href="/formclub"></MenuItem>
-          <MenuItem href="/formgoal"></MenuItem>
+          <MenuItem href="/formgoal"></MenuItem> */}
           <MenuItem href="/events">Events</MenuItem>
 
           {/* <MenuItem href="/form">

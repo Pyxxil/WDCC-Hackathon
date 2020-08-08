@@ -1,3 +1,7 @@
+body {
+    overflow-x: none;
+}
+
 .navbar {
     background-color: #4299e1;
     font-family: 'Monda', sans-serif;

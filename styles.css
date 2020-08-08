@@ -15,6 +15,7 @@
 .container-hero h1 {
   font-family: 'Monda', sans-serif;
   font-weight: 500;
+  font-size: 3em;
 }
 
 .container-hero a {
@@ -145,13 +146,14 @@ article a {
 html {
   font-family: "Monda", sans-serif; /*select font later*/
 }
+
 .container-hero {
   text-align: center;
   margin: 0 auto;
   display: grid;
   place-items: center;
   height: 100vh;
-  /*background-image: ;*/
+  /* background-image: ; */
 }
 
 .container-hero h1 {
@@ -179,6 +181,7 @@ html {
 .Learnmore {
   font-size: 1rem;
 }
+
 .Divider {
   width: 5rem;
   height: 4px;
@@ -225,6 +228,24 @@ html {
   text-align: center;
 }
 
+.container-features-grid p {
+  padding: 1em;
+}
+
 footer {
   text-align: center;
 }
+
+@media only screen and (max-width: 1200px) {
+  .container-features-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
