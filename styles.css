@@ -153,11 +153,7 @@ html {
   display: grid;
   place-items: center;
   height: 100vh;
-<<<<<<< HEAD
   /* background-image: ; */
-=======
-  /*background-image: ;*/
->>>>>>> pushing new changes
 }
 
 .container-hero h1 {
@@ -186,17 +182,12 @@ html {
   font-size: 1rem;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .Divider {
   width: 5rem;
   height: 4px;
   background-color: rgb(66, 153, 225);
   margin: 1rem auto;
 }
-
-.container-about {
-=======
  .container-hero:nth-child(4){
    font-size: 1rem;
  }
@@ -206,19 +197,13 @@ html {
     font-weight: 700;
     margin-top: 3rem;
     font-size: 1.5rem;
-
-=======
- .container-hero:nth-child(4){
-   font-size: 1rem;
- }
+}
 
 .container-hero button{
     padding: 1rem 3rem;
     font-weight: 700;
     margin-top: 3rem;
     font-size: 1.5rem;
-
->>>>>>> 8970b7fda54370fd9f530468658bc4f1b3775642
  }
 
  .Learnmore{
@@ -503,5 +488,3 @@ footer {
   grid-column-gap: 50px;
   background-color:rgba(179, 189, 191,0.15);
 }
-=======
->>>>>>> 8970b7fda54370fd9f530468658bc4f1b3775642
