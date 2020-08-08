@@ -12,6 +12,15 @@
   margin: auto auto;
 }
 
+.container-hero h1 {
+  font-family: 'Monda', sans-serif;
+  font-weight: 500;
+}
+
+.container-hero a {
+  text-decoration: none;
+}
+
 /* purgecss start ignore */
 @tailwind base;
 h1 {
