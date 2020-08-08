@@ -1,38 +1,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
+=======
+import React, {useState, useEffect} from "react"
+import Layout from '../components/layout'
+import { useFetchUser } from '../lib/user'
+
+>>>>>>> 8970b7fda54370fd9f530468658bc4f1b3775642
 function Form(props) {
+  const {user, loading} = useFetchUser()
   const [state, setState] = useState({});
   function handleChange(event) {
-    event.persist();
-    setState((_state) => ({
-      ..._state,
-      [event.target.id]: event.target.value,
-    }));
+    event.persist()
+    setState((_state) => ({ ..._state, [event.target.id]:event.target.value }));
   }
   function handleClick(e) {
-    console.log("asdasd");
+    axios.post("/api/user", {state}).then(res => {
+      console.log(res)
+    }).catch(console.warn())
   }
-  return (
+  return(
     <div>
-      <form id="forUser">
-        <span>Title</span>
-        <input onChange={handleChange} id="Title"></input>
-        <br />
-        <span>Description</span>
-        <input onChange={handleChange} id="Description"></input>
-        <br />
-        <span>Date</span>
-        <input onChange={handleChange} id="Date"></input>
-        <br />
-        <span>Club</span>
-        <input onChange={handleChange} id="Club"></input>
-        <br />
-        <input type="submit" onClick={handleClick}></input>
-      </form>
+      <Layout user={user} loading={loading}>
+        <form id="forUser">
+          <span>Title</span><input onChange={handleChange} id="Title"></input><br/>
+          <span>Description</span><input onChange={handleChange} id="Description"></input><br/>
+          <span>Date</span><input onChange={handleChange} id="Date"></input><br/>
+          <span>Club</span><input onChange={handleChange} id="Club"></input><br/>
+          <input type="submit" onClick={handleClick}></input>
+        </form>
+      </Layout>
     </div>
-  );
+  )
 }
+<<<<<<< HEAD
 export default Form;
 =======
 =======
@@ -72,3 +74,6 @@ export default Form
 >>>>>>> revieweese
 =======
 >>>>>>> pushing to ivan branch
+=======
+export default Form
+>>>>>>> 8970b7fda54370fd9f530468658bc4f1b3775642
