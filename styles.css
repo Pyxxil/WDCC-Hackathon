@@ -1,3 +1,12 @@
+.profile-content {
+  width: 50em;
+  max-width: 100%;
+  margin: auto auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 5em;
+}
+
 /* purgecss start ignore */
 @tailwind base;
 h1 {
@@ -19,7 +28,7 @@ ul {
   @apply list-inside;
 }
 p {
-  @apply mb-1
+  @apply mb-1;
 }
 
 article a {
