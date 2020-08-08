@@ -50,7 +50,7 @@ function Home () {
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="#">
   Signup
 </button>
-<p>Or <a href="#"> Login </a></p>
+<p><a href="#"> Or Login </a></p>
     </div>
   </section>
      
