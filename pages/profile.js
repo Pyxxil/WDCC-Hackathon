@@ -6,11 +6,12 @@ import Layout from "../components/layout";
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
-import FormHelperText from "@material-ui/core/FormHelperText";
+// import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import Button from "@material-ui/core/Button";
 
-import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
+// import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
 
 import { MultiSelect } from "@progress/kendo-react-dropdowns";
 
@@ -52,65 +53,29 @@ function Profile() {
 
   const { user, loading } = useFetchUser({ required: true });
 
-  const job_type = [
-    { label: "Casual", value: 1 },
-    { label: "Internship", value: 2 },
-    { label: "Graduate", value: 3 },
-  ];
+  const job_type = ["Casual", "Internship", "Graduate"];
 
   const industry_type = [
-    { label: "Accounting", value: 1 },
-    { label: "Backend Developer", value: 2 },
-    { label: "Civil Engineer", value: 3 },
-    { label: "Data Analyst", value: 4 },
-    { label: "Frontend Developer", value: 5 },
-    { label: "Mechatronics Engineer", value: 6 },
-    { label: "Sales and Marketing", value: 7 },
-    { label: "Software Developer", value: 8 },
-    { label: "UX/UI Designer", value: 9 },
+    "Accounting",
+    "Backend Developer",
+    "Civil Engineer",
+    "Data Analyst",
+    "Frontend Developer",
+    "Mechatronics Engineer",
+    "Sales and Marketing",
+    "Software Developer",
+    "UX/UI Designer",
   ];
 
   const skills_to_learn = [
-    { label: "C", value: 1 },
-    { label: "C#", value: 2 },
-    { label: "C++", value: 3 },
-    { label: "Java", value: 4 },
-    { label: "HTML/CSS", value: 5 },
-    { label: "Matlab", value: 6 },
-    { label: "Python", value: 7 },
-    { label: "React", value: 8 },
-  ];
-
-  const foods = [
-    "Garlic bread",
-    "Chicken nuggets",
-    "Potatoes",
-    "Rice",
-    "Tomato sauce",
-    "Broccoli",
-    "Cheddar",
-    "Cereal",
-    "Beef",
-    "Lobster",
-    "Salmon",
-    "Mushrooms",
-    "Onions",
-    "Apples",
-    "Oranges",
-    "Burritos",
-  ];
-
-  const drinks = [
-    "Milk",
-    "Water",
-    "Apple juice",
-    "Orange juice",
-    "Beer",
-    "Soda",
-    "Champagne",
-    "Red wine",
-    "Rum",
-    "Sake",
+    "C",
+    "C#",
+    "C++",
+    "Java",
+    "HTML/CSS",
+    "Matlab",
+    "Python",
+    "React",
   ];
 
   return (
@@ -119,48 +84,70 @@ function Profile() {
         <>Loading...</>
       ) : (
         <>
-          <h1>Profile Page</h1>
-          <ProfileCard user={user} />
-          <button href="/api/logout">Logout</button>
-          <h1>Goals</h1>
-          <FormControl className={classes.formControl}>
-            <InputLabel id="demo-simple-select-helper-label">Year</InputLabel>
-            <Select
-              labelId="demo-simple-select-helper-label"
-              id="demo-simple-select-helper"
-              value={age}
-              onChange={handleChange}
-            >
-              <MenuItem value={0}>
-                <em>Pre-uni</em>
-              </MenuItem>
-              <MenuItem value={1}>1st year</MenuItem>
-              <MenuItem value={2}>2nd year</MenuItem>
-              <MenuItem value={3}>3rd year</MenuItem>
-              <MenuItem value={4}>4th year</MenuItem>
-              <MenuItem value={5}>5th year</MenuItem>
-              <MenuItem value={6}>Postgrad</MenuItem>
-              <MenuItem value={7}>Graduate</MenuItem>
-            </Select>
-            <FormHelperText>What stage of uni are you at?</FormHelperText>
-          </FormControl>
+          <div className="profile-content">
+            <h1>Profile Page</h1>
+            <ProfileCard user={user} />
+            <br />
+            <Button variant="outlined" color="secondary" href="/api/logout">
+              Logout
+            </Button>
+            <h1>Goals</h1>
+            <h2>What stage of University are you at?</h2>
+            <FormControl className={classes.formControl}>
+              <InputLabel id="demo-simple-select-helper-label">Year</InputLabel>
+              <Select
+                labelId="demo-simple-select-helper-label"
+                id="demo-simple-select-helper"
+                value={age}
+                onChange={handleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={0}>Pre-uni</MenuItem>
+                <MenuItem value={1}>1st year</MenuItem>
+                <MenuItem value={2}>2nd year</MenuItem>
+                <MenuItem value={3}>3rd year</MenuItem>
+                <MenuItem value={4}>4th year</MenuItem>
+                <MenuItem value={5}>5th year</MenuItem>
+                <MenuItem value={6}>Postgrad</MenuItem>
+                <MenuItem value={7}>Graduate</MenuItem>
+              </Select>
+            </FormControl>
 
-          <h2>What job type are you interested in?</h2>
-          <ReactMultiSelectCheckboxes options={job_type} />
+            <h2>What job type are you interested in?</h2>
+            <MultiSelect
+              style={{ width: "100%" }}
+              label="Job types"
+              name="job types"
+              data={job_type}
+              required={false}
+            />
 
-          <h2>What job industry do you want to work in?</h2>
-          <ReactMultiSelectCheckboxes options={industry_type} />
+            <h2>What job industry do you want to work in?</h2>
+            <MultiSelect
+              style={{ width: "100%" }}
+              label="Industry"
+              name="industry"
+              data={industry_type}
+              required={false}
+            />
 
-          <h2>Which skills would you like to learn?</h2>
-          <ReactMultiSelectCheckboxes options={skills_to_learn} />
+            <h2>Which skills would you like to learn?</h2>
+            <MultiSelect
+              style={{ width: "100%" }}
+              label="Skills"
+              name="skills"
+              data={skills_to_learn}
+              required={false}
+            />
+            <br />
+            <br />
 
-          <MultiSelect
-            style={{ width: "100%" }}
-            label="Foods"
-            name="foods"
-            data={foods}
-            required={true}
-          />
+            <Button variant="outlined" color="primary">
+              Save
+            </Button>
+          </div>
         </>
       )}
     </Layout>
