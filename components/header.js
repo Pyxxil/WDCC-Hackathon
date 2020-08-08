@@ -1,45 +1,47 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import { useRouter } from 'next/router'
 
-const MenuItem = ({ children, href }) =>
-  <Link href={href}>
-    <li className='block mt-4 inline-block  rounded-md text-center bg-orange-200 hover:bg-orange-500 px-4 py-2 m-2 lg:mt-0 hover:text-white mr-4'>
-      <a className='no-underline hover:text-white'>{children}</a>
-    </li>
-  </Link>
+const MenuItem = ({ children, href }) => {
+    const router = useRouter();
+    const active = router.pathname === href;
+    return (
+      <Link href={href}>
+        <li className={active ? 'active-bg nav-links' : 'nav-links'}>
+          <a className={active ? 'active' : 'not-active'}>{children}</a>
+        </li>
+      </Link>
+    )
+}
 
 
 function Header ({ user, loading }) {
+  
   return (
-    <header className='bg-orange-300'>
-      <nav className='container flex items-center justify-between flex-wrap  py-2 '>
-        <div id='Brand' className='text-3xl text-black-700'>
-          WDCC Workshop Application
+    <header className='navbar'>
+      <nav className='container flex items-center justify-between flex-wrap'>
+        <div id='Brand' className="logo">
+          <MenuItem id="landing-page" href='/'>Timeline</MenuItem>
         </div>
-        <ul className=' flex   '>
-          <MenuItem href='/'>
-              Home
-          </MenuItem>
-          <MenuItem href="/form">
-            Make stuff
-          </MenuItem>
+        <ul className='flex'>
           <MenuItem href="/formevent"></MenuItem>
           <MenuItem href="/formclub"></MenuItem>
-          <MenuItem href="/formgoal"></MenuItem>
-          <MenuItem href='/about'>
-              About
+          <MenuItem href="/formgoal"></MenuItem>    
+          <MenuItem href='/event'>
+            Events
           </MenuItem>
-          <MenuItem href="/calendar">
-            Calendar
-          </MenuItem>
-          <MenuItem href="/event"/>
+          
+          {/* <MenuItem href="/form">
+            Make stuff
+          </MenuItem> */}
+          
           {!loading &&
             (user ? (
               <>
-                <MenuItem href='/reportSWR'>
-                Report
+                <MenuItem href='/calendar'>
+                  Calendar
                 </MenuItem>
-                <MenuItem href='/api/logout'>
-                Logout
+                <MenuItem href='/profile'>
+                  Profile
                 </MenuItem>
               </>
             ) : (
