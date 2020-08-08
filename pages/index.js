@@ -37,7 +37,7 @@ function Home() {
   return (
     <Layout user={user} loading={loading}>
       {loading && <p>Loading login info...</p>}
-      {!loading && !user && (
+      {!loading && (
         <>
           <section className="container-hero">
             <div>
