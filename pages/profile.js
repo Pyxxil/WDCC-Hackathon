@@ -51,7 +51,7 @@ function Profile() {
   const classes = useStyles();
   const { user, loading } = useFetchUser({ required: true });
   const preferences = useSWR(
-    `${config.HOST}/api/preferences${user ? "?user_id=" + user.nickname : ""}`,
+    `${config.HOST}/api/preferences${user ? "/" + user.nickname : ""}`,
     fetcher
   );
   const [state, setState] = React.useState({});
@@ -98,7 +98,7 @@ function Profile() {
 
   const saveData = () => {
     if (user) {
-      fetch("/api/preferences?user_id=" + user.nickname, {
+      fetch("/api/preferences/" + user.nickname, {
         method: "post",
         body: JSON.stringify(state),
       });
