@@ -14,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.6.0",
+    "@material-ui/core": "^4.11.0",
     "dotenv": "^8.2.0",
     "mongodb": "^3.5.9",
     "n-readlines": "^1.0.0",
@@ -21,6 +22,7 @@
     "next-connect": "^0.8.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-multiselect-checkboxes": "^0.1.1",
     "recharts": "^1.8.5",
     "swr": "^0.2.3"
   },
