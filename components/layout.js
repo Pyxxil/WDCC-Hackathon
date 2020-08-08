@@ -6,10 +6,7 @@ function Layout({ user, loading = false, children }) {
     <>
       <Head>
         <title>WDCC - App Template</title>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet"/>
 
         <link
           rel="stylesheet"
@@ -24,7 +21,7 @@ function Layout({ user, loading = false, children }) {
       </Head>
 
       <Header user={user} loading={loading} />
-      <main className="container mx-auto">{children}</main>
+      <main >{children}</main>
     </>
   );
 }
