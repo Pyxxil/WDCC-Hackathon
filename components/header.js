@@ -26,7 +26,7 @@ function Header({ user, loading }) {
           <MenuItem href="/formevent"></MenuItem>
           <MenuItem href="/formclub"></MenuItem>
           <MenuItem href="/formgoal"></MenuItem>
-          <MenuItem href="/event">Events</MenuItem>
+          <MenuItem href="/events">Events</MenuItem>
 
           {/* <MenuItem href="/form">
             Make stuff
