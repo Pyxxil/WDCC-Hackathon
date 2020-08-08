@@ -51,7 +51,7 @@ function Home () {
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="#">
   Signup
 </button>
-<p><a href="#"> Or Login </a></p>
+<p><a href="#" class="LearnMore"> Learn more </a></p>
     </div>
   </section>
 
@@ -70,17 +70,17 @@ function Home () {
        <div className = "Divider"/>
       </div>
       <div className="container-features-grid">
-      <div><img src="/img/cal.svg"/><p>Calendar: {/* add logo of calendar */} Keep track of your assignments and upcoming events</p></div>
-      <div><img src="/img/profile.svg"/><p>Personalized: {/* add logo of a tick */} Tell us your goals and let us personalize all the events for you </p></div>
-      <div><img src="/img/info.svg"/><p>Consolidated Information {/* add logo of a tick */} Information at the touch of your fingers </p></div>
-      <div><img src="/img/event.svg"/><p> Events: {/* add logo of a tick */} See career workshops and club events on your personalized calendar</p></div>
+      <div><img src="/img/cal.svg"/><p><h4>Calendar:</h4> {/* add logo of calendar */} Keep track of your assignments and upcoming events.</p></div>
+      <div><img src="/img/profile.svg"/><p><h4>Personalized:</h4> {/* add logo of a tick */} Tell us your goals and let us personalize all the events for you. </p></div>
+      <div><img src="/img/info.svg"/><p><h4>Consolidated Information:</h4> {/* add logo of a tick */} Information at the touch of your fingers, curated by us. </p></div>
+      <div><img src="/img/event.svg"/><p><h4>Events:</h4> {/* add logo of a tick */} See relevant career workshops and club events. </p></div>
       </div>
        
     </section>
 
     <footer>
-      <p id = "TOC"> Terms of Conditions</p>
-            
+      <a href="#"  id = "TOC"> Terms of Conditions</a>
+
     </footer>     
         </>
   )}
