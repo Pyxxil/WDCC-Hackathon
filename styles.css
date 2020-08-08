@@ -8,8 +8,8 @@ h2 {
 }
 h3 {
   @apply text-xl font-thin leading-loose;
-
 }
+
 h4 {
   @apply font-semibold;
 }
@@ -69,7 +69,30 @@ line-height: 1;
 .container-hero button{
     padding: 1rem 3rem;
     font-weight: 700;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    
  }
 
+ .Divider{
+   width: 5rem;
+   height: 4px;
+   background-color: rgb(66, 153, 225);
+   margin: 1rem auto;
+ }
 
+ .container-about{
+  text-align: center;
+  margin: 0px;
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+  background-color:rgb(66, 153, 225);
+  color: white;
+  padding: 0px;
+  width: 100vw;
+}
+
+.container-about .Divider{
+  background-color:white;
+}

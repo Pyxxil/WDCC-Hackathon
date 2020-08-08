@@ -46,11 +46,21 @@ function Home () {
   <section className="container-hero">
     <div>
       <h1>Timeline</h1>
-      <p>To start your path to success: </p>
+      <div className="Divider"></div>
+      <p>Start your path to success. </p>
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" href="#">
   Signup
 </button>
 <p><a href="#"> Or Login </a></p>
+    </div>
+  </section>
+
+  <section className="container-about">
+  <div>
+      <h2>About</h2>
+      <div className="Divider"></div>
+      <p> This is our product!! </p>
+      
     </div>
   </section>
      
