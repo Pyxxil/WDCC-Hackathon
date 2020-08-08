@@ -12,6 +12,8 @@ import Select from "@material-ui/core/Select";
 
 import ReactMultiSelectCheckboxes from "react-multiselect-checkboxes";
 
+import { MultiSelect } from "@progress/kendo-react-dropdowns";
+
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -79,6 +81,38 @@ function Profile() {
     { label: "React", value: 8 },
   ];
 
+  const foods = [
+    "Garlic bread",
+    "Chicken nuggets",
+    "Potatoes",
+    "Rice",
+    "Tomato sauce",
+    "Broccoli",
+    "Cheddar",
+    "Cereal",
+    "Beef",
+    "Lobster",
+    "Salmon",
+    "Mushrooms",
+    "Onions",
+    "Apples",
+    "Oranges",
+    "Burritos",
+  ];
+
+  const drinks = [
+    "Milk",
+    "Water",
+    "Apple juice",
+    "Orange juice",
+    "Beer",
+    "Soda",
+    "Champagne",
+    "Red wine",
+    "Rum",
+    "Sake",
+  ];
+
   return (
     <Layout user={user} loading={loading}>
       {loading ? (
@@ -119,6 +153,14 @@ function Profile() {
 
           <h2>Which skills would you like to learn?</h2>
           <ReactMultiSelectCheckboxes options={skills_to_learn} />
+
+          <MultiSelect
+            style={{ width: "100%" }}
+            label="Foods"
+            name="foods"
+            data={foods}
+            required={true}
+          />
         </>
       )}
     </Layout>
