@@ -7,6 +7,7 @@ const MenuItem = ({ children, href }) =>
     </li>
   </Link>
 
+
 function Header ({ user, loading }) {
   return (
     <header className='bg-orange-300'>
@@ -18,9 +19,19 @@ function Header ({ user, loading }) {
           <MenuItem href='/'>
               Home
           </MenuItem>
+          <MenuItem href="/form">
+            Make stuff
+          </MenuItem>
+          <MenuItem href="/formevent"></MenuItem>
+          <MenuItem href="/formclub"></MenuItem>
+          <MenuItem href="/formgoal"></MenuItem>
           <MenuItem href='/about'>
               About
           </MenuItem>
+          <MenuItem href="/calendar">
+            Calendar
+          </MenuItem>
+          <MenuItem href="/event"/>
           {!loading &&
             (user ? (
               <>
