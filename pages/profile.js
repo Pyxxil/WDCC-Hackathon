@@ -74,24 +74,18 @@ function Profile() {
   const job_type = ["Casual", "Internship", "Graduate"];
 
   const industry_type = [
-    "Accounting",
-    "Backend Developer",
-    "Civil Engineer",
-    "Data Analyst",
-    "Frontend Developer",
-    "Mechatronics Engineer",
-    "Sales and Marketing",
+    "Design",
+    "Robotics",
+    "Photography",
+    "Management",
     "Software Developer",
-    "UX/UI Designer",
   ];
 
   const skills_to_learn = [
-    "C",
-    "C#",
-    "C++",
-    "Java",
-    "HTML/CSS",
-    "Matlab",
+    "Cloud",
+    "JavaScript",
+    "Leadership",
+    "Photoshop",
     "Python",
     "React",
   ];
