@@ -10,7 +10,6 @@ const LinkA = ({ children, href }) => (
   </Link>
 );
 
-
 function Home() {
   // set required to true to force the page to require login.
   const { user, loading } = useFetchUser({ required: false });
@@ -45,16 +44,16 @@ function Home() {
               <h1>Timeline</h1>
               <div className="Divider"></div>
               <p>Start your path to success. </p>
-              <button><a href="/api/login"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-
-              >
-                Sign Up
-              </a>
+              <button>
+                <a
+                  href="/api/login"
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                >
+                  Sign Up
+                </a>
               </button>
               <p>
                 <a href="/events" className="LearnMore">
-                  {" "}
                   Or view all events{" "}
                 </a>
               </p>
