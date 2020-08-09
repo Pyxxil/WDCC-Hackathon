@@ -22,9 +22,7 @@ handler.post(async (req, res) => {
   const data = JSON.parse(req.body);
 
   try {
-    await req.db
-      .collection("events")
-      .updateOne({ date: data.date }, { $set: data }, { upsert: true });
+    await req.db.collection("events").insertOne(data);
     res.json({ message: "ok" });
   } catch (e) {
     res.json({ message: "error", e });
