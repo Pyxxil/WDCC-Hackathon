@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 import useSWR from "swr";
-import Layout from "../components/layout";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 

@@ -3,7 +3,7 @@ import {Map, GoogleApiWrapper, InfoWindow, Marker, DirectionsRenderer, Polyline}
 const mapStyles = {
   margin: "0 auto",
   height: '440px',
-  width: "440px"
+  width: "480px"
 };
 let oriLng = 174.770661
 let oriLat = -36.8511171
@@ -37,6 +37,7 @@ class ShowMap extends React.Component {
       }
     );
   }
+  //I mean I tried to do it
   render() {
     return(
       <div class="map">
