@@ -51,13 +51,13 @@ function Form(props) {
         <input onChange={handleChange} id="Skills"></input>
         <br />
         <span>lat</span>
-        <input onChange={handleChanghe} id="lat"></input>
+        <input onChange={handleChange} id="lat"></input>
         <br />
         <span>lng</span>
-        <input onChange={handleChanghe} id="lng"></input>
+        <input onChange={handleChange} id="lng"></input>
         <br />
         <span>Price</span>
-        <input onChange={handleChanghe} id="Price"></input>
+        <input onChange={handleChange} id="Price"></input>
         <br />
         <input type="submit" onClick={handleClick}></input>
       </Layout>
