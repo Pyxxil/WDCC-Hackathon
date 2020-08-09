@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
-import axios from "axios"
+import axios from "axios";
 import { post } from "jquery";
 
 function Form(props) {
@@ -15,14 +15,6 @@ function Form(props) {
       [event.target.id]: event.target.value,
     });
   }
-<<<<<<< HEAD
-  function handleClick(e) {
-    axios.post("/api/user", { state })
-      .then((res) => {
-        console.log(res);
-      })
-      .catch(console.warn());
-=======
 
   async function handleClick(e) {
     console.log("SENDING", state);
@@ -30,7 +22,6 @@ function Form(props) {
       method: "post",
       body: JSON.stringify(state),
     }).catch((err) => console.log("Error", err));
->>>>>>> e5f71d75701e9eab01cd2ab6f76c12d5570426c1
   }
 
   return (
