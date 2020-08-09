@@ -24,13 +24,16 @@
 
 /* purgecss start ignore */
 @tailwind base;
+
 h1 {
   @apply text-3xl font-thin leading-loose;
 }
+
 h2 {
   @apply text-2xl font-thin leading-loose;
   text-align: center;
 }
+
 h3 {
   @apply text-xl font-thin leading-loose;
 }
@@ -38,10 +41,12 @@ h3 {
 h4 {
   @apply font-semibold;
 }
+
 ul {
   @apply list-disc;
   @apply list-inside;
 }
+
 p {
   @apply mb-1;
 }
@@ -53,12 +58,15 @@ article a {
 .btn-blue {
   @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
 }
+
 .btn-blue:hover {
   @apply bg-blue-700;
 }
+
 .panel-error {
   @apply bg-red-700 text-white font-bold py-2 px-4 rounded;
 }
+
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
@@ -76,34 +84,41 @@ article a {
   line-height: 1.125em;
   margin: 0 auto;
 }
+
 .react-calendar,
 .react-calendar *,
 .react-calendar *:before,
 .react-calendar *:after {
   box-sizing: border-box;
 }
+
 .react-calendar button {
   margin: 0;
   border: 0;
   outline: none;
 }
+
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
+
 .react-calendar__navigation {
   height: 44px;
   margin-bottom: 1em;
 }
+
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__navigation button:enabled:hover {
   background-color: #14a76c;
   border-radius: 5px;
 }
+
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
@@ -111,15 +126,19 @@ article a {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
 }
+
 .react-calendar__month-view__days__day--weekend {
-  color: #ff652f;
+  color: rgb(255, 119, 62);
 }
+
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
 }
+
 .react-calendar__tile {
   max-width: 100%;
   text-align: center;
@@ -128,23 +147,29 @@ article a {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__tile:disabled {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .react-calendar__tile:enabled:hover {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .dateTime {
   margin: auto 5px;
 }
+
 .dateTopBar {
   display: flex;
   background-color: #272727;
 }
+
 html {
-  font-family: "Monda", sans-serif; /*select font later*/
+  font-family: "Monda", sans-serif;
+  /*select font later*/
 }
 
 .container-hero {
@@ -152,9 +177,9 @@ html {
   margin: 0 auto;
   display: grid;
   place-items: center;
-  height: 100vh;
-  /* background-image: ; */
+  height: 90vh;
 }
+
 
 .container-hero h1 {
   font-size: 5rem;
@@ -188,6 +213,7 @@ html {
   background-color: rgb(66, 153, 225);
   margin: 1rem auto;
 }
+
 .container-hero:nth-child(4) {
   font-size: 1rem;
 }
@@ -209,6 +235,7 @@ html {
 .Learnmore {
   font-size: 1rem;
 }
+
 .Divider {
   width: 5rem;
   height: 4px;
@@ -262,11 +289,13 @@ html {
 footer {
   text-align: center;
 }
+
 .react-calendar {
   position: relative;
   top: 1vh;
   margin: auto;
 }
+
 .react-calendar {
   /* margin-bottom: 2vh; */
   width: 80vw;
@@ -278,34 +307,41 @@ footer {
   font-family: "Sigmar One", cursive;
   line-height: 1.125em;
 }
+
 .react-calendar,
 .react-calendar *,
 .react-calendar *:before,
 .react-calendar *:after {
   box-sizing: border-box;
 }
+
 .react-calendar button {
   margin: 0;
   border: 0;
   outline: none;
 }
+
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
+
 .react-calendar__navigation {
   height: 44px;
   margin-bottom: 1em;
 }
+
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__navigation button:enabled:hover {
   background-color: #14a76c;
   border-radius: 5px;
 }
+
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
@@ -313,15 +349,19 @@ footer {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
 }
+
 .react-calendar__month-view__days__day--weekend {
-  color: #ff652f;
+  color:rgb(255, 119, 62);
 }
+
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
 }
+
 .react-calendar__tile {
   max-width: 100%;
   text-align: center;
@@ -330,27 +370,34 @@ footer {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__tile:disabled {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .react-calendar__tile:enabled:hover {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .dateTime {
   margin: auto 5px;
 }
+
 .dateTopBar {
   display: flex;
   background-color: #272727;
 }
+
 .eventNote {
-  border: 1px solid rgb(218, 98, 47);
+  border: 1px solid rgb(255, 119, 62);
 }
+
 .everythinghasamarginnote {
   margin: 5px;
 }
+
 #displayNotes {
   margin: 50px;
   display: grid;
@@ -359,6 +406,7 @@ footer {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
 #eventHolder {
   margin: 0 auto;
   padding: 20px;
@@ -372,6 +420,7 @@ footer {
   grid-column-gap: 50px;
   background-color: rgba(179, 189, 191, 0.15);
 }
+
 @media only screen and (max-width: 1200px) {
   .container-features-grid {
     grid-template-columns: 1fr 1fr;
@@ -384,11 +433,13 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 .react-calendar {
   position: relative;
   top: 1vh;
   margin: auto;
 }
+
 .react-calendar {
   /* margin-bottom: 2vh; */
   width: 80vw;
@@ -400,34 +451,41 @@ footer {
   font-family: "Sigmar One", cursive;
   line-height: 1.125em;
 }
+
 .react-calendar,
 .react-calendar *,
 .react-calendar *:before,
 .react-calendar *:after {
   box-sizing: border-box;
 }
+
 .react-calendar button {
   margin: 0;
   border: 0;
   outline: none;
 }
+
 .react-calendar button:enabled:hover {
   cursor: pointer;
 }
+
 .react-calendar__navigation {
   height: 44px;
   margin-bottom: 1em;
 }
+
 .react-calendar__navigation button {
   min-width: 44px;
   background: none;
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__navigation button:enabled:hover {
   background-color: #14a76c;
   border-radius: 5px;
 }
+
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
@@ -435,15 +493,19 @@ footer {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__month-view__weekdays__weekday {
   padding: 0.5em;
 }
+
 .react-calendar__month-view__days__day--weekend {
-  color: #ff652f;
+  color: rgb(255, 119, 62);
 }
+
 .react-calendar__month-view__days__day--neighboringMonth {
   color: #757575;
 }
+
 .react-calendar__tile {
   max-width: 100%;
   text-align: center;
@@ -452,27 +514,34 @@ footer {
   font-size: 2em;
   font-family: "Sigmar One", cursive;
 }
+
 .react-calendar__tile:disabled {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .react-calendar__tile:enabled:hover {
   background-color: #14a76c;
   border-radius: 20px;
 }
+
 .dateTime {
   margin: auto 5px;
 }
+
 .dateTopBar {
   display: flex;
   background-color: #272727;
 }
+
 .eventNote {
-  border: 1px solid rgb(218, 98, 47);
+  border: 3px solid rgb(255, 119, 62);
 }
+
 .everythinghasamarginnote {
   margin: 5px;
 }
+
 #displayNotes {
   margin: 50px;
   display: grid;
@@ -481,6 +550,7 @@ footer {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
 #eventHolder {
   margin: 0 auto;
   padding: 20px;
@@ -493,4 +563,54 @@ footer {
   grid-template-rows: 1fr;
   grid-column-gap: 50px;
   background-color: rgba(179, 189, 191, 0.15);
+}
+
+.description {
+  background-color: rgb(255, 119, 62);
+  margin: 0;
+  padding: 0 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0;
+  padding: 1rem;
+  font-weight: bold;
+  color: rgb(255, 119, 62);
+}
+
+.price {
+  margin: 0;
+  padding: 0 1rem 5rem 0;
+  font-weight: bold;
+  color: black;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.date {
+  margin: 0;
+  padding: 0 0 5rem 1rem;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: left;
+  color: black;
+}
+
+.seemore {
+  text-align: right;
+  background-color: rgb(255, 119, 62);
+  color: white;
+}
+
+.AboutEvent{
+  font-size: 2rem;
+  font-weight: bold;
+  margin:0;
+  padding: 0 1rem;
+  background-color: rgb(255, 119, 62);
+  color: white;
 }
