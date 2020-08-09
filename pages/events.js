@@ -33,17 +33,26 @@ const Events = () => {
       <div id="displayNotes">
         {events.data.filter(filterFor(preferences.data[0])).map((event) => (
           <div class="eventNote">
-            <h1 class="everythinghasamarginnote" >
-              <a href={`/event/${event._id}`} class = "title">
+            <h1 class="everythinghasamarginnote">
+              <a href={`/event/${event._id}`} class="title">
                 {event.Title} by <span>{event.Club}</span>
               </a>
             </h1>
-            
-            <h1 class="everythinghasamarginnote dates" style={inline}>{event.Date}</h1>
+
+            <h1
+              class="everythinghasamarginnote dates"
+              style={{ display: "inline" }}
+            >
+              {event.Date}
+            </h1>
             <p class="everythinghasamarginnote price">{event.Price}</p>
-            <p class = "AboutEvent"> About the event: </p>
-            <p class="everythinghasamarginnote descriptions">{event.Description}</p>
-            <a href="#" class = "everythinghasamarginnotes seemore">See More >> </a>
+            <p class="AboutEvent"> About the event: </p>
+            <p class="everythinghasamarginnote descriptions">
+              {event.Description}
+            </p>
+            <a href="#" class="everythinghasamarginnotes seemore">
+              See More{" "}
+            </a>
           </div>
         ))}
       </div>
