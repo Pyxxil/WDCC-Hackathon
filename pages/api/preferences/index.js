@@ -15,9 +15,7 @@ handler.get(async (req, res) => {
   // find returns a cursor which we need to iterate through to get the results.
   // use next or toArray
 
-  req.json({ message: "error" });
-
-  res.json(doc);
+  res.json({ message: "error" });
 });
 
 handler.post(async (req, res) => {

@@ -119,19 +119,6 @@ function Home() {
           </footer>
         </>
       )}
-
-      {/* After login see the information below */}
-      {/* {user && (
-        <>
-          <ProfileCard user={user}>
-            <button className='btn-blue' onClick={handleClick}>Event</button>
-          </ProfileCard>
-          <h2>Reports</h2>
-          <LinkA href='/report'>Report - useEffect</LinkA>
-          <LinkA href='/reportSSR'>Report - SSR</LinkA>
-          <LinkA href='/reportSWR'>Report - SWR</LinkA>
-
-        </>)} */}
     </Layout>
   );
 }

@@ -41,7 +41,6 @@ function Showcalendar(props) {
     ];
     month = monthNum[monthShort.indexOf(month)];
     const route = `/calendar/${day}/${month}/${year}`;
-    console.log(route);
   }
   return (
     <div>
