@@ -54,7 +54,6 @@ function Home() {
               </button>
               <p>
                 <a href="/events" className="LearnMore">
-                  {" "}
                   Or view all events{" "}
                 </a>
               </p>
