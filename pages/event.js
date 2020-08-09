@@ -10,10 +10,12 @@ function Event(props) {
   const [data, setData] = useState("")
   const [latpos, setLatpos] = useState("")
   const [lngpos, setLngpos] = useState("")
+  const [day, setDay] = useState("")
   useEffect(() => {
     // axios.get("").then(res => {
     //  setData(res.data)
   // }).catch(console.warn())
+    setDay(new Date(2020,1,1))
   },[])
   useEffect(() => {
     setData({
@@ -25,24 +27,25 @@ function Event(props) {
     setLatpos(180)
     setLngpos(180)
   },[])
-  useEffect(() => {
-    if($("#totalPage").width() < 800) {
-      $("#addingStuff").addClass("eventGoogCalSmall")
-    } else {
-      $("#addingStuff").addClass("eventGoogCalBig")
-    }
-  })
+  // useEffect(() => {
+  //   if($("#totalPage").width() < 800) {
+  //     $("#addingStuff").addClass("eventGoogCalSmall")
+  //   } else {
+  //     $("#addingStuff").addClass("eventGoogCalBig")
+  //   }
+  // })
   return(
     <div id="totalPage">
       <Layout user={user} loading={loading}>
       <div id="eventHolder">
         <div>
-          <h2 id="title">{data.title} by {data.club}</h2>
-          <h2 id="date">{data.date}</h2>
+          <div>
+            <h2 id="titledate"><span class="boldtext" id="title">{data.title} by {data.club}</span><span id="date">{data.date}</span></h2>
+          </div>
           <p id="description">{data.description}</p>
         </div><br/>
-      <div id="addingStuff">
-          <Calendar className={["eventCalendar"]} value={new Date(2020, 3, 5)}/>
+      <div id="addingStuff" className="eventGoogCal">
+          <Calendar className={["eventCalendar"]}  value={day}/>
           <ShowMap/>
         </div>
       </div>

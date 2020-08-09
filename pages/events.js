@@ -10,7 +10,7 @@ function Events(props) {
   useEffect(()=> {
     axios.get("/api/events").then(res => {
       console.log(res)
-      //setEvents(res.data)
+      // setEvents(res.data)
     })
   },[])
   useEffect(() => {

@@ -19,7 +19,7 @@ function Showcalendar(props) {
   return(
     <div>
       <Layout user={user} loading={loading}>
-        <Calendar onChange = {onChange} />
+        <Calendar onChange = {onChange}/>
       </Layout>
     </div>
   )

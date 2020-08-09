@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
-
+import axios from "axios"
 function Form(props) {
   const { user, loading } = useFetchUser();
   const [state, setState] = useState({});
@@ -13,8 +13,7 @@ function Form(props) {
     }));
   }
   function handleClick(e) {
-    axios
-      .post("/api/user", { state })
+    axios.post("/api/user", { state })
       .then((res) => {
         console.log(res);
       })
