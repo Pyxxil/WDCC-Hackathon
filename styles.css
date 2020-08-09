@@ -389,10 +389,6 @@ footer {
   background-color: #272727;
 }
 
-.eventNote {
-  border: 1px solid rgb(66, 153, 225);
-}
-
 .everythinghasamarginnote {
   margin: 5px;
 }
@@ -545,6 +541,8 @@ footer {
 
 .eventNote {
   border: 3px solid rgb(66, 153, 225);
+  padding-bottom: 0;
+  /*max-height: 315px;*/
 }
 
 .react-calendar__navigation {
@@ -736,8 +734,8 @@ footer {
   margin: 0;
   padding: 0 1rem;
   color: white;
-  line-clamp: 2;
-  -webkit-line-clamp: 2;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   font-size: 1rem;
   display: -webkit-box;
@@ -748,7 +746,7 @@ footer {
   font-family: "monda";
   text-transform: uppercase;
   font-size: 1.8rem;
-  margin: 0;
+  margin: 1rem;
   color: rgb(66, 153, 225);
   font-weight: bold;
   line-clamp: 2;
@@ -760,7 +758,7 @@ footer {
 
 .price {
   margin: 0;
-  padding: 0 1rem 0 0;
+  padding: 0 1.25rem 0 0;
   color: black;
   font-size: 1rem;
   text-align: right;
@@ -797,11 +795,11 @@ footer {
 }
 
 .PriceDate {
-  padding-bottom: 2rem;
+  padding-bottom: 2.2rem;
 }
 .dates {
   margin: 0;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 1.2rem;
   font-weight: lighter;
   font-size: 1rem;
   text-align: left;
@@ -810,15 +808,17 @@ footer {
 
 .DescBG {
   background-color: rgb(66, 153, 225);
-  max-height: 100px;
-  line-clamp: 4;
+  max-height: 200px;
+  line-clamp: 5;
+  min-height: 113px;
 }
 
 .AboutEvent {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0;
-  padding: 0 1rem;
+  padding: 10px 1rem 0 1rem;
   background-color: rgb(66, 153, 225);
   color: white;
+  text-transform: uppercase;
 }

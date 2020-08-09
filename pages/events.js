@@ -47,14 +47,12 @@ const Events = () => {
             </h1>
             <p class="everythinghasamarginnote price" style={{ display: "inline" }}>{event.Price}</p>
             </div>
-            <div className = "DescBG">
-            <p class="AboutEvent"> About the event: </p>
-  
-            <p>
+              <div className = "DescBG">
+              <p class="AboutEvent"> About the event: </p>
+              <p>
               <a class="everythinghasamarginnote descriptions" href={`/event/${event._id}`}>
               {event.Description}</a>
-            </p>
-          
+              </p>
             </div>
           </div>
         ))}
