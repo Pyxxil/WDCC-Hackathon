@@ -1,5 +1,5 @@
 import nextConnect from "next-connect";
-import mongodb from "../../middleware/database";
+import mongodb from "../../../middleware/database";
 
 const handler = nextConnect();
 
@@ -20,11 +20,9 @@ handler.get(async (req, res) => {
 
 handler.post(async (req, res) => {
   const data = JSON.parse(req.body);
-  data.date = new Date();
+
   try {
-    await req.db
-      .collection("events")
-      .updateOne({ date: data.date }, { $set: data }, { upsert: true });
+    await req.db.collection("events").insertOne(data);
     res.json({ message: "ok" });
   } catch (e) {
     res.json({ message: "error", e });

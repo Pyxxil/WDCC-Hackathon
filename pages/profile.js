@@ -51,10 +51,15 @@ function Profile() {
   const classes = useStyles();
   const { user, loading } = useFetchUser({ required: true });
   const preferences = useSWR(
-    `${config.HOST}/api/preferences${user ? "?user_id=" + user.nickname : ""}`,
+    `${config.HOST}/api/preferences${user ? "/" + user.nickname : ""}`,
     fetcher
   );
-  const [state, setState] = React.useState({});
+  const [state, setState] = React.useState({
+    Year: "",
+    Job: [],
+    Industry: [],
+    Skills: [],
+  });
 
   const handleChange = (pref) => {
     return (event) => {
@@ -63,7 +68,7 @@ function Profile() {
   };
 
   useEffect(() => {
-    if (preferences.data) {
+    if (preferences.data && preferences.data[0]) {
       setState(preferences.data[0]);
     }
   }, [preferences.data]);
@@ -74,31 +79,25 @@ function Profile() {
   const job_type = ["Casual", "Internship", "Graduate"];
 
   const industry_type = [
-    "Accounting",
-    "Backend Developer",
-    "Civil Engineer",
-    "Data Analyst",
-    "Frontend Developer",
-    "Mechatronics Engineer",
-    "Sales and Marketing",
+    "Design",
+    "Robotics",
+    "Photography",
+    "Management",
     "Software Developer",
-    "UX/UI Designer",
   ];
 
   const skills_to_learn = [
-    "C",
-    "C#",
-    "C++",
-    "Java",
-    "HTML/CSS",
-    "Matlab",
+    "Cloud",
+    "JavaScript",
+    "Leadership",
+    "Photoshop",
     "Python",
     "React",
   ];
 
   const saveData = () => {
     if (user) {
-      fetch("/api/preferences?user_id=" + user.nickname, {
+      fetch("/api/preferences/" + user.nickname, {
         method: "post",
         body: JSON.stringify(state),
       });
@@ -131,14 +130,14 @@ function Profile() {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={0}>Pre-uni</MenuItem>
-                <MenuItem value={1}>1st year</MenuItem>
-                <MenuItem value={2}>2nd year</MenuItem>
-                <MenuItem value={3}>3rd year</MenuItem>
-                <MenuItem value={4}>4th year</MenuItem>
-                <MenuItem value={5}>5th year</MenuItem>
-                <MenuItem value={6}>Postgrad</MenuItem>
-                <MenuItem value={7}>Graduate</MenuItem>
+                <MenuItem value={"0"}>Pre-uni</MenuItem>
+                <MenuItem value={"1"}>1st year</MenuItem>
+                <MenuItem value={"2"}>2nd year</MenuItem>
+                <MenuItem value={"3"}>3rd year</MenuItem>
+                <MenuItem value={"4"}>4th year</MenuItem>
+                <MenuItem value={"5"}>5th year</MenuItem>
+                <MenuItem value={"6"}>Postgrad</MenuItem>
+                <MenuItem value={"7"}>Graduate</MenuItem>
               </Select>
             </FormControl>
 
