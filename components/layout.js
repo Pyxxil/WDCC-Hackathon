@@ -5,7 +5,7 @@ function Layout({ user, loading = false, children }) {
   return (
     <>
       <Head>
-        <title>WDCC - App Template</title>
+        <title>Timeline</title>
         <link
           href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap"
           rel="stylesheet"

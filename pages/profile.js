@@ -51,7 +51,7 @@ function Profile() {
   const classes = useStyles();
   const { user, loading } = useFetchUser({ required: true });
   const preferences = useSWR(
-    `${config.HOST}/api/preferences${user ? "?user_id=" + user.nickname : ""}`,
+    `${config.HOST}/api/preferences${user ? "/" + user.nickname : ""}`,
     fetcher
   );
   const [state, setState] = React.useState({});
@@ -98,7 +98,7 @@ function Profile() {
 
   const saveData = () => {
     if (user) {
-      fetch("/api/preferences?user_id=" + user.nickname, {
+      fetch("/api/preferences/" + user.nickname, {
         method: "post",
         body: JSON.stringify(state),
       });
@@ -131,14 +131,14 @@ function Profile() {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={0}>Pre-uni</MenuItem>
-                <MenuItem value={1}>1st year</MenuItem>
-                <MenuItem value={2}>2nd year</MenuItem>
-                <MenuItem value={3}>3rd year</MenuItem>
-                <MenuItem value={4}>4th year</MenuItem>
-                <MenuItem value={5}>5th year</MenuItem>
-                <MenuItem value={6}>Postgrad</MenuItem>
-                <MenuItem value={7}>Graduate</MenuItem>
+                <MenuItem value={"0"}>Pre-uni</MenuItem>
+                <MenuItem value={"1"}>1st year</MenuItem>
+                <MenuItem value={"2"}>2nd year</MenuItem>
+                <MenuItem value={"3"}>3rd year</MenuItem>
+                <MenuItem value={"4"}>4th year</MenuItem>
+                <MenuItem value={"5"}>5th year</MenuItem>
+                <MenuItem value={"6"}>Postgrad</MenuItem>
+                <MenuItem value={"7"}>Graduate</MenuItem>
               </Select>
             </FormControl>
 
