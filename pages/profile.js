@@ -68,7 +68,7 @@ function Profile() {
   };
 
   useEffect(() => {
-    if (preferences.data) {
+    if (preferences.data && preferences.data[0]) {
       setState(preferences.data[0]);
     }
   }, [preferences.data]);
