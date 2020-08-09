@@ -801,6 +801,7 @@ footer {
 }
 .boldtext {
   font-weight: bold;
+  /*nextbold*/
 }
 
 .PriceDate{
