@@ -180,7 +180,6 @@ html {
   height: 90vh;
 }
 
-
 .container-hero h1 {
   font-size: 5rem;
   line-height: 1;
@@ -355,7 +354,11 @@ footer {
 }
 
 .react-calendar__month-view__days__day--weekend {
+<<<<<<< HEAD
   color:rgb(66, 153, 225);
+=======
+  color: rgb(255, 119, 62);
+>>>>>>> db4db8eaf815c3de402370c61adede3bca42cc1c
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
@@ -614,7 +617,7 @@ footer {
   padding-top: 50px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  width: 70%;
+  width: 80%;
   background-color: rgba(179, 189, 191, 0.15);
 }
 
@@ -622,6 +625,7 @@ footer {
 
 .eventCalendar.react-calendar {
   top: 0.5vh;
+  font-size: 1em;
 }
 .eventCalendar.react-calendar,
 .eventCalendar.react-calendar *,
@@ -653,7 +657,7 @@ footer {
 .eventCalendar.react-calendar {
   margin-top: 9vh;
   /* margin-bottom: 2vh; */
-  width: 350px;
+  width: 480px;
   max-width: 100%;
   background: white;
   /* border:4px solid #a0a096; */
@@ -694,7 +698,7 @@ footer {
 .eventCalendar.react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.05em;
+  font-size: 1em;
   font-family: "sans-serif", "sans-serif";
 }
 .eventCalendar.react-calendar__month-view__weekdays__weekday {
@@ -707,7 +711,7 @@ footer {
   color: #757575;
 }
 .eventCalendar.react-calendar__tile {
-  max-width: 120%;
+  max-width: 100%;
   text-align: center;
   padding: 1em 0.5em;
   font-size: 0.3em;
@@ -724,7 +728,7 @@ footer {
 .content {
   background-color: red;
 }
-.eventGoogCalBig {
+.eventGoogCal {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
@@ -766,6 +770,34 @@ footer {
   text-align: right;
   float: right;
 }
+.testing {
+  background-color: red;
+}
+
+@media only screen and (max-width: 1280px) {
+  .eventGoogCal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+  }
+}
+#date {
+  text-align: right;
+}
+#title {
+  text-align: left;
+}
+#titledate {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  margin-bottom: 20px;
+}
+.boldtext {
+  font-weight: bold;
+}
 
 .PriceDate{
   padding-bottom: 2rem;
@@ -785,10 +817,10 @@ footer {
   line-clamp: 4;
 }
 
-.AboutEvent{
-  font-size: 1rem;
+.AboutEvent {
+  font-size: 2rem;
   font-weight: bold;
-  margin:0;
+  margin: 0;
   padding: 0 1rem;
   background-color: rgb(66, 153, 225) ;
   color: white;
