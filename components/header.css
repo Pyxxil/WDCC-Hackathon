@@ -43,4 +43,26 @@ body {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    .logo .nav-links {
+        font-size: 1.5em;
+        padding: 0.55em 1.4em;
+    }
+    
+    .nav-links {
+        font-size: 1em;
+    }
+    
+}
 
+@media only screen and (max-width: 600px) {
+    .logo .nav-links {
+        font-size: 1em;
+        padding: 0.55em 1.4em;
+    }
+    
+    .nav-links {
+        font-size: 0.7em;
+    }
+    
+}
