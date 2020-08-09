@@ -354,7 +354,15 @@ footer {
 }
 
 .react-calendar__month-view__days__day--weekend {
+<<<<<<< HEAD
   color:rgb(66, 153, 225);
+=======
+<<<<<<< HEAD
+  color:rgb(66, 153, 225);
+=======
+  color: rgb(255, 119, 62);
+>>>>>>> db4db8eaf815c3de402370c61adede3bca42cc1c
+>>>>>>> master
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
@@ -813,8 +821,8 @@ footer {
   line-clamp: 4;
 }
 
-.AboutEvent{
-  font-size: 1rem;
+.AboutEvent {
+  font-size: 2rem;
   font-weight: bold;
   margin: 0;
   padding: 0 1rem;
