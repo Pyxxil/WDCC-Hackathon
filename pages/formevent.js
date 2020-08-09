@@ -56,6 +56,9 @@ function Form(props) {
         <span>lng</span>
         <input onChange={handleChanghe} id="lng"></input>
         <br />
+        <span>Price</span>
+        <input onChange={handleChanghe} id="Price"></input>
+        <br />
         <input type="submit" onClick={handleClick}></input>
       </Layout>
     </div>
