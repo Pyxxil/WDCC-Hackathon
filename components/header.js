@@ -15,8 +15,8 @@ const MenuItem = ({ children, href }) => {
 
 function Header({ user, loading }) {
   return (
-    <header className="navbar">
-      <nav className="container flex items-center justify-between flex-wrap">
+    <header className="navbar" style={{zIndex:"10000"}}>
+      <nav className="container flex items-center justify-between flex-wrap" style={{zIndex:"10000"}}>
         <div id="Brand" className="logo">
           <MenuItem id="landing-page" href="/">
             Timeline
