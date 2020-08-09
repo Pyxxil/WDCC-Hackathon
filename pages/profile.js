@@ -54,7 +54,12 @@ function Profile() {
     `${config.HOST}/api/preferences${user ? "/" + user.nickname : ""}`,
     fetcher
   );
-  const [state, setState] = React.useState({});
+  const [state, setState] = React.useState({
+    Year: "",
+    Job: [],
+    Industry: [],
+    Skills: [],
+  });
 
   const handleChange = (pref) => {
     return (event) => {
