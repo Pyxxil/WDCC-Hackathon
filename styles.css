@@ -354,15 +354,7 @@ footer {
 }
 
 .react-calendar__month-view__days__day--weekend {
-<<<<<<< HEAD
-  color:rgb(66, 153, 225);
-=======
-<<<<<<< HEAD
-  color:rgb(66, 153, 225);
-=======
-  color: rgb(255, 119, 62);
->>>>>>> db4db8eaf815c3de402370c61adede3bca42cc1c
->>>>>>> master
+  color: rgb(66, 153, 225);
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
@@ -753,11 +745,11 @@ footer {
 }
 
 .title {
-  font-family: 'monda';
+  font-family: "monda";
   text-transform: uppercase;
   font-size: 1.8rem;
   margin: 0;
-  color: rgb(66, 153, 225) ;
+  color: rgb(66, 153, 225);
   font-weight: bold;
   line-clamp: 2;
   -webkit-line-clamp: 2;
@@ -804,7 +796,7 @@ footer {
   /*nextbold*/
 }
 
-.PriceDate{
+.PriceDate {
   padding-bottom: 2rem;
 }
 .dates {
@@ -816,7 +808,7 @@ footer {
   color: black;
 }
 
-.DescBG{
+.DescBG {
   background-color: rgb(66, 153, 225);
   max-height: 100px;
   line-clamp: 4;
@@ -827,6 +819,6 @@ footer {
   font-weight: bold;
   margin: 0;
   padding: 0 1rem;
-  background-color: rgb(66, 153, 225) ;
+  background-color: rgb(66, 153, 225);
   color: white;
 }
