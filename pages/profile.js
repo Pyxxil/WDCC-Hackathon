@@ -54,7 +54,12 @@ function Profile() {
     `${config.HOST}/api/preferences${user ? "/" + user.nickname : ""}`,
     fetcher
   );
-  const [state, setState] = React.useState({});
+  const [state, setState] = React.useState({
+    Year: "",
+    Job: [],
+    Industry: [],
+    Skills: [],
+  });
 
   const handleChange = (pref) => {
     return (event) => {
@@ -63,7 +68,7 @@ function Profile() {
   };
 
   useEffect(() => {
-    if (preferences.data) {
+    if (preferences.data && preferences.data[0]) {
       setState(preferences.data[0]);
     }
   }, [preferences.data]);
@@ -74,24 +79,18 @@ function Profile() {
   const job_type = ["Casual", "Internship", "Graduate"];
 
   const industry_type = [
-    "Accounting",
-    "Backend Developer",
-    "Civil Engineer",
-    "Data Analyst",
-    "Frontend Developer",
-    "Mechatronics Engineer",
-    "Sales and Marketing",
+    "Design",
+    "Robotics",
+    "Photography",
+    "Management",
     "Software Developer",
-    "UX/UI Designer",
   ];
 
   const skills_to_learn = [
-    "C",
-    "C#",
-    "C++",
-    "Java",
-    "HTML/CSS",
-    "Matlab",
+    "Cloud",
+    "JavaScript",
+    "Leadership",
+    "Photoshop",
     "Python",
     "React",
   ];
