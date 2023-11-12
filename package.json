@@ -33,7 +33,7 @@
     "swr": "^0.2.3"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^9.8.5",
     "babel-core": "^6.26.3",
     "babel-jest": "^26.2.2",
@@ -43,6 +43,6 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^26.2.2",
     "standard": "^14.3.4",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^3.3.5"
   }
 }
